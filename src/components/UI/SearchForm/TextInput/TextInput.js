@@ -1,7 +1,9 @@
 import React from 'react';
 
+import classes from './TextInput.module.css';
+
 const TextInput = (props) => (
-  <input type="text" onChange={props.changed} />
+  <input className={classes.TextInput} type="text" onChange={props.changed} />
 );
 
 export default TextInput;

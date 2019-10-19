@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-import Aux from '../../hoc/Auxiliary/Auxiliary';
+import classes from './RedditSearch.module.css';
+
 import Posts from '../../components/Posts/Posts';
 import SearchForm from '../../components/UI/SearchForm/SearchForm';
 import TextInput from '../../components/UI/SearchForm/TextInput/TextInput';
@@ -22,7 +23,7 @@ class RedditSearch extends Component {
   submitHandler = e => {
     e.preventDefault();
     const subredditName = this.state.inputValue;
-    axios.get(`http://www.reddit.com/r/${subredditName}.json`)
+    axios.get(`https://www.reddit.com/r/${subredditName}.json`)
       .then(res => {
         console.log(res);
         const posts = res.data.data.children.map(obj => obj.data);
@@ -51,7 +52,7 @@ class RedditSearch extends Component {
   
   render () {
     return (
-      <Aux>
+      <div className={classes.RedditSearch}>
         <SearchForm>
           <TextInput changed={this.inputChangeHandler} />
           <SubmitButton submit={this.submitHandler} />
@@ -60,7 +61,7 @@ class RedditSearch extends Component {
         {this.state.error ? <h2>{this.state.errorMessage}</h2> : 
           <Posts title={this.state.title} posts={this.state.posts} />
         }
-      </Aux>
+      </div>
     )
   }
 }

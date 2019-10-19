@@ -1,0 +1,17 @@
+.Title {
+  margin-bottom: 40px;
+}
+
+.Items {
+  margin: 0;
+  padding: 0;
+}
+
+.Item {
+  list-style: none;
+  margin-bottom: 40px;
+}
+
+.Item:last-child {
+  margin-bottom: 0;
+}
