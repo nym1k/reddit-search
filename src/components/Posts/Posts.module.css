@@ -15,3 +15,27 @@
 .Item:last-child {
   margin-bottom: 0;
 }
+
+.Footer {
+  text-align: center;;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.Link {
+  display: inline-block;
+  width: auto;
+  padding: 10px 20px;
+  
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  text-decoration: none;
+  
+  background-color: #273c75;
+  transition: background-color .3s ease;
+}
+
+.Link:hover {
+  background-color: #0097e6;
+}

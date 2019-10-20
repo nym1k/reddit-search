@@ -54,7 +54,7 @@ class RedditSearch extends Component {
     return (
       <div className={classes.RedditSearch}>
         <SearchForm>
-          <TextInput changed={this.inputChangeHandler} />
+          <TextInput changed={this.inputChangeHandler} placeholder={'Search a subreddit'} />
           <SubmitButton submit={this.submitHandler} />
         </SearchForm>
 

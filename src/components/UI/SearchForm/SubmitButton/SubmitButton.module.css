@@ -4,4 +4,10 @@
   padding: 10px 20px;
   background-color: #273c75;
   color: #f5f6fa;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.Submit:hover {
+  background-color: #0097e6;
 }
